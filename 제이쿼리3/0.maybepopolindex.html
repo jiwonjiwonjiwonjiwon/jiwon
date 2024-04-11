@@ -836,7 +836,7 @@
         <!-- 헤더 -->
         <div class="header">
             <div class="popup">
-                <a class="logo" href="../제이쿼리3/0.maybepopol.html"></a>
+                <a class="logo" href="../제이쿼리3/0.maybepopolindex.html"></a>
                     <div class="t_menu">
                             <div class="m_text">
                                 <div class="search"></div>
@@ -1335,6 +1335,12 @@ let mb_leg = $(`.mainbanner`).length;
     //인디클릭시 움직이기 
 $('.circle').click(function(){
 
+
+    $('.circle').css({pointerEvents: 'none'})
+        setTimeout(function(){
+            $('.circle').css({pointerEvents: 'auto'})
+        }, 1000)
+
         let gap = $(this).index() - $('.circle_active').index();
     console.log(gap , $(this).index() , $('.circle_active').index() )
         if(gap > 0) {
@@ -1365,6 +1371,12 @@ $('.circle').click(function(){
 
     }
     main_auto()
+
+    $(`.circle`).hover(function(){
+        clearInterval(interval)
+    },function(){
+        main_auto();
+    })
 
     $(`.mainbanner`).hover(function(){
         clearInterval(interval)
