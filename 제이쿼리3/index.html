@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../js/jquery.js"></script>
+        
     <style>
+
+
+
         
         body{
             
@@ -1237,7 +1241,17 @@
     <script>
 
 
+
+var UserAgent = navigator.userAgent; 
+if (UserAgent.match(/iPhone|ipad|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null)
+{
+  location.href = "https://jiwonjiwonjiwonjiwon.github.io/jiwon/모바일/0.maybepopol.mobileindex.html" /* 모바일 홈페이지 경로 */
+}
+
+
         // 판 위 아래 
+
+
            $(document).ready(function(){
 
             $('.b_text').hover(function(){
